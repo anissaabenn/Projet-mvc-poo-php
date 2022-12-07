@@ -1,4 +1,13 @@
-<?php ob_start(); ?>
+<?php 
+require_once "Game.php";
+
+$game1 = new Game(1, "Starcraft 2", 8);
+$game2 = new Game(2, "Among US", 10);
+$game3 = new Game(3, "Valorant", 10);
+
+$games = [$game1, $game2, $game3];
+
+ob_start(); ?>
 
 <p>Games - Notre sélection </p>
 
@@ -18,13 +27,15 @@ require_once "base.html.php";
     </tr>
   </thead>
   <tbody>
+    <?php foreach($games as $game) : ?>
     <tr class="table-light">
-      <td>Starcraft 2</td>
-      <td>8</td>
+      <td><?= $game->getTitle() ?></td>
+      <td><?= $game->getNbPlayers() ?></td>
       <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a></td>
       <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
     </tr>
-    <tr class="table-light">
+    <?php endforeach; ?>
+    <!-- <tr class="table-light">
       <td>Among Us</td>
       <td>10</td>
       <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a></td>
@@ -35,7 +46,7 @@ require_once "base.html.php";
       <td>10</td>
       <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a></td>
       <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
+    </tr> -->
 </table>
 </div>
 
