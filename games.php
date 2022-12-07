@@ -1,7 +1,9 @@
-<?php
+<?php ob_start(); ?>
 
-$content = "Games";
+<p>Games - Notre sélection </p>
+
+<?php
+$content = ob_get_clean();
 $title = "Liste de Jeux";
 require_once "base.html.php";
-
 ?>
