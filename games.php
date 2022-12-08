@@ -14,6 +14,9 @@ $gameManager->addGame($game1);
 $gameManager->addGame($game2);
 $gameManager->addGame($game3);
 
+$gameManager->loadGames();
+
+
 $games = $gameManager->getGames();
 
 ob_start(); ?>
