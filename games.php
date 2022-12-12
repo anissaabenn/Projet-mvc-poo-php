@@ -2,17 +2,17 @@
 require_once "Game.php";
 require_once "GameManager.php";
 
-$game1 = new Game(1, "Starcraft 2", 8);
-$game2 = new Game(2, "Among US", 10);
-$game3 = new Game(3, "Valorant", 10);
+// $game1 = new Game(1, "Starcraft 2", 8);
+// $game2 = new Game(2, "Among US", 10);
+// $game3 = new Game(3, "Valorant", 10);
 
 // $games = [$game1, $game2, $game3];
 
 $gameManager = new GameManager();
 
-$gameManager->addGame($game1);
-$gameManager->addGame($game2);
-$gameManager->addGame($game3);
+// $gameManager->addGame($game1);
+// $gameManager->addGame($game2);
+// $gameManager->addGame($game3);
 
 $gameManager->loadGames();
 
