@@ -26,7 +26,7 @@ ob_start(); ?>
 <?php
 $content = ob_get_clean();
 $title = "Liste de Jeux";
-require_once "base.html.php";
+require_once "view/base.view.php";
 ?>
 
 <div class="container">
