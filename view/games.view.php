@@ -1,13 +1,5 @@
 <?php 
-require_once "Game.php";
-require_once "GameManager.php";
-
-$gameManager = new GameManager();
-
-$gameManager->loadGames();
-
-
-$games = $gameManager->getGames();
+require_once "controller/GameController.php";
 
 ob_start(); ?>
 
