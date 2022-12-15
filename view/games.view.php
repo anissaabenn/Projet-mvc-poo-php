@@ -1,7 +1,8 @@
 <?php 
 require_once "controller/GameController.php";
 
-ob_start(); ?>
+ob_start(); 
+?>
 
 <p>Games - Notre sélection </p>
 

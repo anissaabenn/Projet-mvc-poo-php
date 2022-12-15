@@ -1,4 +1,7 @@
 <?php
+
+define("URL", str_replace("index.php","",(isset($_SERVER['HTTPS']) ? "https" : "http")));
+
 require_once "controller/GameController.php";
 $gameController = new GameController;
 
