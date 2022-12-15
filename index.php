@@ -8,6 +8,8 @@ $gameController = new GameController;
 if(empty($_GET['page'])){
     require_once "view/home.view.php";
 }else {
+    $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL));
+    var_dump($url); //Tester sur URL --> projet.com/games/delete url[0] // games
     switch ($_GET['page']) {
         case 'accueil':
             require_once "view/home.view.php";
