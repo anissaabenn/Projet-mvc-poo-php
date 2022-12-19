@@ -26,6 +26,11 @@ class GameController{
         require_once "view/edit.games.view.php";
     }
 
+    public function editGameValidation(){
+        $this->gameManager->editGameDB($_POST['id-game'], $_POST['title'], $_POST['nbPlayers']);
+        header('Location: ' . URL . "games");
+    }
+
 }
 
 ?>

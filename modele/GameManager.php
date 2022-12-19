@@ -49,6 +49,21 @@ class GameManager extends Manager{
             }
         }
     }
+
+    public function editGameDB($id, $title, $nbPlayers){
+        $req = "UPDATE games SET title = :title, nb_players = :nbPlayers WHERE id = :id";
+        $statement = $this->getBdd()->prepare($req);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $statement->bindValue(":title", $title, PDO::PARAM_STR);
+        $statement->bindValue(":nbPlayers", $nbPlayers, PDO::PARAM_INT);
+        $result = $statement->execute();
+        $statement->closeCursor();
+
+        if($result){
+            $this->getGameById($id)->setTitle($title);
+            $this->getGameById($id)->setNbPlayers($nbPlayers);
+        }
+    }
 }
 
 
