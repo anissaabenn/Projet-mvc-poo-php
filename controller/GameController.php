@@ -23,7 +23,7 @@ class GameController{
 
     public function editGameForm($id){
         $game = $this->gameManager->getGameById($id);
-        require_once "view/edit.game.view.php";
+        require_once "view/edit.games.view.php";
     }
 
 }
