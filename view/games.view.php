@@ -33,4 +33,4 @@ require_once "view/base.view.php";
 </table>
 </div>
 
-<a href="" class="btn btn-success d-block m-auto w-25">Ajouter un jeux</a>
+<a href= "<?= URL ?>games/add" class="btn btn-success d-block m-auto w-25">Ajouter un jeux</a>
