@@ -64,6 +64,19 @@ class GameManager extends Manager{
             $this->getGameById($id)->setNbPlayers($nbPlayers);
         }
     }
+
+    public function deleteGameDB($id){
+        $req = "DELETE FROM games WHERE id = :id";
+        $statement = $this->getBdd()->prepare($req);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $result = $statement->execute();
+        $statement->closeCursor();
+
+        if($result){
+            $game = $this->getGameById($id);
+            unset($game);
+        }
+    }
 }
 
 

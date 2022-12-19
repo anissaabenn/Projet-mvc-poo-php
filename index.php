@@ -30,7 +30,7 @@ if(empty($_GET['page'])){
                     $gameController->editGameValidation();
                 }
                 elseif ($url[1] === "delete") {
-                    echo "Supprimer un jeu";
+                    $gameController->deleteGame($url[2]);
                 }
                 break;
     }

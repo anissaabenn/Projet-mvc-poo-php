@@ -31,6 +31,11 @@ class GameController{
         header('Location: ' . URL . "games");
     }
 
+    public function deleteGame($id){
+        $this->gameManager->deleteGameDB($id);
+        header('Location : ' . URL . "games");
+    }
+
 }
 
 ?>
