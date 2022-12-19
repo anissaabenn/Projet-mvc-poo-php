@@ -25,7 +25,7 @@ if(empty($_GET['page'])){
                     $gameController->newGameValidation();
                 }
                 elseif ($url[1] === "edit") {
-                    echo "Modifier un jeu";
+                    $gameController->editGameForm($url[2]);
                 }
                 elseif ($url[1] === "delete") {
                     echo "Supprimer un jeu";

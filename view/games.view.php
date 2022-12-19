@@ -26,7 +26,7 @@ require_once "view/base.view.php";
     <tr class="table-light">
       <td><?= $game->getTitle() ?></td>
       <td><?= $game->getNbPlayers() ?></td>
-      <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a></td>
+      <td><a href="<?= URL?>games/edit/<?= $game->getId() ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
       <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
     </tr>
     <?php endforeach; ?>
